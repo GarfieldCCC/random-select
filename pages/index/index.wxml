@@ -1,0 +1,54 @@
+<view class="container">
+	<view class="header">
+		<image class="plus" src="../../assets/plus.png" />
+		<input class="new-todo" value="{{ input }}" placeholder="在此处输入主题" auto-focus bindinput="inputChangeHandle"
+			bindconfirm="addTodoHandle" />
+	</view>
+	<block wx:if="{{ todos.length }}">
+		<view class="todos">
+			<!-- List items should get the class `completed` when marked as completed -->
+			<view class="item{{ item.completed ? ' completed' : '' }}" wx:for="{{ todos }}" wx:key="index">
+				<!-- completed: success, todo: circle -->
+				<icon class="checkbox" type="{{ item.completed ? 'success' : 'circle' }}" bindtap="toggleTodoHandle"
+					data-index="{{ index }}" />
+				<text class="name" user-select="true" catchtap="tip" data-index="{{ index }}">{{ item.name }}</text>
+				<image class="edit" src="../../assets/edit.png" catchtap="navigate" data-index="{{ index }}" />
+			</view>
+		</view>
+		<view class="footer">
+			<text class="btn" bindtap="toggleAllHandle">全选</text>
+			<text wx:if="{{ selectedCount }}">选中 {{ selectedCount }} 项 </text>
+			<text class="btn" wx:if="{{ todos.length > leftCount }}" bindtap="clearCompletedHandle">删除所选项</text>
+		</view>
+	</block>
+	<block wx:else>
+		<view class="empty">
+			<text class="title">什么都没有(｡･∀･)ﾉﾞ</text>
+		</view>
+	</block>
+</view>
+<view class="popups">
+	<view wx:if="{{!completed}}">
+		<view class='toast-box'>
+			<view class='toastbg'></view>
+			<view class='showToast'>
+				<view class='toast-title'>
+					<text>修改主题</text>
+				</view>
+				<view class='toast-main'>
+					<view class='toast-input'>
+						<input focus="true" bindinput='getUserInput' value="{{values}}"></input>
+					</view>
+				</view>
+				<view class='toast-button'>
+					<view class='cancel'>
+						<button bindtap="cancelSelected">取消</button>
+					</view>
+					<view class='success'>
+						<button bindtap="successSelected">确定</button>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,163 @@
+.header {
+	display: flex;
+	align-items: center;
+	border: 1rpx solid #e0e0e0;
+	border-radius: 10rpx;
+	box-shadow: 0 0 5rpx #e0e0e0;
+	margin-bottom: 30rpx;
+	padding: 20rpx;
+}
+
+.header .plus {
+	width: 41rpx;
+	height: 41rpx;
+	margin-right: 20rpx;
+}
+
+.header .new-todo {
+	flex: 1;
+	font-size: 28rpx;
+}
+
+.edit {
+	width: 41rpx;
+	height: 41rpx;
+	margin-left: 20rpx;
+}
+
+.todos {
+	border: 1rpx solid #e0e0e0;
+	border-radius: 10rpx;
+	box-shadow: 0 0 5rpx #e0e0e0;
+}
+
+.todos .item {
+	display: flex;
+	align-items: center;
+	padding: 25rpx;
+	border-bottom: 1rpx solid #e0e0e0;
+}
+
+.todos .item:last-child {
+	border-bottom: 0;
+}
+
+.todos .item .checkbox {
+	margin-right: 20rpx;
+}
+
+.todos .item .name {
+	flex: 1;
+	font-size: 30rpx;
+	color: #444;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	margin: 30rpx 0;
+	padding: 0 10rpx;
+	font-size: 26rpx;
+	color: #777;
+}
+
+.empty {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.empty .title {
+	font-size: 60rpx;
+	margin: 200rpx 50rpx 50rpx;
+	color: #444;
+}
+
+.empty .content {
+	color: #666;
+	text-align: center;
+}
+
+.popups {
+	width: 100%;
+	min-height: 100vh;
+}
+
+.toast-box {
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+}
+
+
+.toastbg {
+	opacity: 0.2;
+	background-color: black;
+	position: absolute;
+	width: 100%;
+	min-height: 100vh;
+}
+
+.showToast {
+	position: absolute;
+	opacity: 1;
+	width: 70%;
+	margin-left: 15%;
+	margin-top: 40%;
+}
+
+.toast-title {
+	padding-left: 5%;
+	background-color: #999;
+	color: white;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+	border-top-right-radius: 16rpx;
+	border-top-left-radius: 16rpx;
+}
+
+.toast-main {
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+	background-color: white;
+	text-align: center;
+}
+
+.toast-input {
+	margin-left: 5%;
+	margin-right: 5%;
+	border: 1px solid #ddd;
+	padding-left: 2vh;
+	padding-right: 2vh;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+}
+
+.toast-button {
+	display: flex;
+}
+
+.cancel,
+.success {
+	width: 50%;
+}
+
+.cancel button {
+	color: #999;
+	width: 100%;
+	background-color: white;
+	border-radius: 0px;
+	border-bottom-left-radius: 16rpx;
+}
+
+.success button {
+	color: #1d2228;
+	width: 100%;
+	background-color: white;
+	border-radius: 0px;
+	border-bottom-right-radius: 16rpx;
+}
