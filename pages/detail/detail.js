@@ -166,7 +166,7 @@ Page({
 				break
 			}
 		}
-		this.setData({ all:all, content: content, completed: true })
+		this.setData({ all: all, content: content, completed: true })
 		this.save()
 	},
 
