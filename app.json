@@ -1,34 +1,34 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/detail/detail"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "随机选择",
-    "navigationBarTextStyle": "black"
-  },
-  "tabBar": {
-    "color": "#999",
-    "selectedColor": "#222",
-    "backgroundColor": "#f8f9fb",
-    "borderStyle": "white",
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "所有",
-        "iconPath": "assets/todos.png",
-        "selectedIconPath": "assets/todos-active.png"
-      },
-      {
-        "pagePath": "pages/logs/logs",
-        "text": "日志",
-        "iconPath": "assets/logs.png",
-        "selectedIconPath": "assets/logs-active.png"
-      }
-    ]
-  },
-  "sitemapLocation": "sitemap.json"
+	"pages": [
+		"pages/index/index",
+		"pages/logs/logs",
+		"pages/detail/detail"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "随机选择",
+		"navigationBarTextStyle": "black"
+	},
+	"tabBar": {
+		"color": "#999",
+		"selectedColor": "#222",
+		"backgroundColor": "#f8f9fb",
+		"borderStyle": "white",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "所有",
+				"iconPath": "assets/todos.png",
+				"selectedIconPath": "assets/todos-active.png"
+			},
+			{
+				"pagePath": "pages/logs/logs",
+				"text": "日志",
+				"iconPath": "assets/logs.png",
+				"selectedIconPath": "assets/logs-active.png"
+			}
+		]
+	},
+	"sitemapLocation": "sitemap.json"
 }
