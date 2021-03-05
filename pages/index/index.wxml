@@ -8,6 +8,7 @@
 		<view class="todos">
 			<!-- List items should get the class `completed` when marked as completed -->
 			<view class="item{{ item.completed ? ' completed' : '' }}" wx:for="{{ todos }}" wx:key="index">
+			
 				<!-- completed: success, todo: circle -->
 				<icon class="checkbox" type="{{ item.completed ? 'success' : 'circle' }}" bindtap="toggleTodoHandle"
 					data-index="{{ index }}" />
